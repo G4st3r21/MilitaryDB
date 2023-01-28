@@ -13,9 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
+import MilitaryMuseum.views
+from MilitaryDB import settings
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('find_form/', MilitaryMuseum.views.request_find_form, name="find"),
+    path('found_documents/', MilitaryMuseum.views.response_found_documents, name="found"),
+    path('document/<int:document_id>', MilitaryMuseum.views.response_document, name="doc")
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
