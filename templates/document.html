@@ -1,0 +1,285 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Запись из базы данных</title>
+    <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'css/document.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'js/jquery-1.9.1.min.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
+</head>
+{% if bg_image %}
+    <body class="u-body u-xl-mode" data-lang="ru"
+          style="
+                  background: rgba(225,225,225,0.35) url(
+                  {% get_media_prefix %}{{ bg_image }}) no-repeat;
+                  -moz-background-size: 100%; /* Firefox 3.6+ */
+                  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+                  -o-background-size: 100%; /* Opera 9.6+ */
+                  background-size: 100%; /* Современные браузеры */
+                  ">
+{% else %}
+    <body class="u-body u-xl-mode" data-lang="ru">
+{% endif %}
+<header class=" u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-clearfix u-header u-section-row-container"
+        id="sec-53f4" style="">
+    <div class="u-section-rows">
+        <div class="u-custom-color-1 u-section-row u-section-row-1">
+            <div class="u-clearfix u-sheet u-valign-top u-sheet-1">
+                <p class="u-align-center u-text u-text-1"> Московское высшее общевойсковое командное
+                    училище&nbsp;<br>Министерство обороны Российской Федерации
+                </p>
+                <img class="u-image u-image-contain u-image-default u-image-1"
+                     src="{% get_media_prefix %}{{ "images/default/Эмблема.png" }}" alt=""
+                     data-image-width="1181" data-image-height="1371">
+                <div class="u-gallery u-layout-grid u-lightbox u-no-transition u-show-text-none u-gallery-1">
+                    <div class="u-gallery-inner u-gallery-inner-1">
+                        <div class="u-effect-hover-zoom u-gallery-item u-shape-rectangle" data-image-width="1280"
+                             data-image-height="1280">
+                            <div class="u-back-slide">
+                                <img class="u-back-image u-expanded u-image-contain"
+                                     src="{% get_media_prefix %}{{ "images/default/жук.png" }}">
+                            </div>
+                            <div class="u-over-slide u-shading u-over-slide-1">
+                                <h3 class="u-gallery-heading"></h3>
+                                <p class="u-gallery-text"></p>
+                            </div>
+                        </div>
+                        <div class="u-effect-hover-zoom u-gallery-item u-shape-rectangle" data-image-width="1254"
+                             data-image-height="1280">
+                            <div class="u-back-slide">
+                                <img class="u-back-image u-expanded u-image-contain"
+                                     src="{% get_media_prefix %}{{ "images/default/лен.png" }}">
+                            </div>
+                            <div class="u-over-slide u-shading u-over-slide-2">
+                                <h3 class="u-gallery-heading"></h3>
+                                <p class="u-gallery-text"></p>
+                            </div>
+                        </div>
+                        <div class="u-effect-hover-zoom u-gallery-item u-shape-rectangle" data-image-width="1280"
+                             data-image-height="1280">
+                            <div class="u-back-slide">
+                                <img class="u-back-image u-expanded u-image-contain"
+                                     src="{% get_media_prefix %}{{ "images/default/ок.png" }}">
+                            </div>
+                            <div class="u-over-slide u-shading u-over-slide-3">
+                                <h3 class="u-gallery-heading"></h3>
+                                <p class="u-gallery-text"></p>
+                            </div>
+                        </div>
+                        <div class="u-effect-hover-zoom u-gallery-item u-shape-rectangle" data-image-width="1070"
+                             data-image-height="1280">
+                            <div class="u-back-slide">
+                                <img class="u-back-image u-expanded u-image-contain"
+                                     src="{% get_media_prefix %}{{ "images/default/кр.png" }}">
+                            </div>
+                            <div class="u-over-slide u-shading u-over-slide-4">
+                                <h3 class="u-gallery-heading"></h3>
+                                <p class="u-gallery-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div style="background-color: #a8191f">
+            <div class="u-list u-block-control u-block-f578-31"
+                 style="width: 888px; margin-left: auto; margin-right: auto"
+                 data-block="8">
+                <div class="u-repeater u-block-control u-block-f578-32"
+                     style="grid-template-columns: repeat(2, calc(50% - 5px)); min-height: 45.1094px; grid-gap: 10px;
+                     color: white;"
+                     data-block="9">
+                    <div class="u-align-center u-container-style u-list-item u-repeater-item u-block-control u-block-f578-33"
+                         data-block="10" data-block-type="ListItem">
+                        <div class="u-container-layout u-similar-container u-valign-middle u-block-f578-34"
+                             style="padding-top: 0.2658px; padding-bottom: 0.2658px; padding-left: 10px; padding-right: 10px"
+                             data-container-layout-dom="1"><p
+                                class="u-text u-text-default u-block-control u-block-f578-35"
+                                style="font-weight: 700; text-transform: uppercase; margin-top: 0px; margin-left: auto; margin-right: auto; margin-bottom: -0.0157px"
+                                data-block="11" data-block-type="Text"><a class="u-text u-text-default u-text-3"
+                                                                          href="{% url 'about' %}">История МВОКУ</a></p>
+                        </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-list-item u-repeater-item u-block-control u-block-f578-36"
+                         style="" data-block="12" data-block-type="ListItem">
+                        <div class="u-container-layout u-similar-container u-valign-middle u-block-f578-37"
+                             style="padding-top: 0.2658px; padding-bottom: 0.2658px; padding-left: 10px; padding-right: 10px"
+                             data-container-layout-dom="2"><p
+                                class="u-text u-text-default u-block-control u-block-f578-38"
+                                style="font-weight: 700; text-transform: uppercase; margin-top: 0px; margin-left: auto; margin-right: auto; margin-bottom: -0.0157px"
+                                data-block="13" data-block-type="Text"><a class="u-text u-text-default u-text-4"
+                                                                          href="{% url 'find' %}">Поиск записей</a></p>
+                        </div>
+                    </div>
+
+                    <div class="u-align-center u-container-style u-list-item u-repeater-item u-block-control u-block-f578-36"
+                         style="" data-block="12" data-block-type="ListItem">
+                        <div class="u-container-layout u-similar-container u-valign-middle u-block-f578-37"
+                             style="padding-top: 0.2658px; padding-bottom: 0.2658px; padding-left: 10px; padding-right: 10px"
+                             data-container-layout-dom="2"><p
+                                class="u-text u-text-default u-block-control u-block-f578-38"
+                                style="font-weight: 700; text-transform: uppercase; margin-top: 0px; margin-left: auto; margin-right: auto; margin-bottom: -0.0157px"
+                                data-block="13" data-block-type="Text"><a class="u-text u-text-default u-text-4"
+                                                                          href="{% url 'about_project' %}">О проекте</a>
+                        </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+<section class="u-clearfix u-grey-5 u-section-1" id="carousel_20ba">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
+            <div class="u-gutter-0 u-layout">
+                <div class="u-layout-row">
+                    <div class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                        <div class="u-container-layout u-valign-top u-container-layout-1">
+                            <img class="u-image u-image-1" alt="" data-image-width="5000"
+                                 data-image-height="5000" src="{% get_media_prefix %}{{ main_picture.picture }}">
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-30 u-white u-layout-cell-2">
+                        <div class="u-container-layout u-container-layout-2">
+                            <h2 class="u-align-center u-custom-font u-font-raleway u-text u-text-2">
+                                {% if not combatant.rank %}
+                                    неизвестно
+                                {% else %}
+                                    {{ combatant.rank }}
+                                {% endif %}
+                            </h2>
+                            <h6 class="u-align-center u-custom-font u-font-raleway u-text u-text-1">
+                                {{ combatant.get_fio }}
+                            </h6>
+                            <h6 class="u-custom-font u-font-raleway u-text u-text-3">Дата рождения:&nbsp;<br>
+                                {% if not combatant.date_of_birth %}
+                                    неизвестно
+                                {% else %}
+                                    {{ combatant.date_of_birth }}
+                                {% endif %}
+                            </h6>
+                            <h6 class="u-custom-font u-font-raleway u-text u-text-4">Дата смерти:&nbsp; <br>
+                                {% if not  combatant.date_of_death %}
+                                    неизвестно
+                                {% else %}
+                                    {{ combatant.date_of_death }}
+                                {% endif %}
+                            </h6>
+                            <h6 class="u-custom-font u-font-raleway u-text u-text-5">Год выпуска:
+                                {% if not combatant.issue_year %}
+                                    неизвестно
+                                {% else %}
+                                    {{ combatant.issue_year }}
+                                {% endif %}
+                                <br>
+                            </h6>
+                            <h6 class="u-custom-font u-font-raleway u-text u-text-6">Батальон:
+                                {% if not combatant.battalion %}
+                                    неизвестно
+                                {% else %}
+                                    {{ combatant.battalion }}
+                                {% endif %}
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-2" id="sec-5942" style="min-height: 600px">
+    <div class="u-clearfix u-sheet u-sheet-1" style="min-height: 600px">
+        <h3 class="u-text u-text-1">{{ combatant.details }}</h3>
+        {% if other_pictures %}
+
+            <div class="u-carousel u-gallery u-layout-carousel u-lightbox u-no-transition u-show-text-none u-gallery-1"
+                 data-interval="5000" data-u-ride="carousel" id="carousel-9387">
+                <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+                    <li data-u-target="#carousel-9387" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle"
+                        style="width: 10px; height: 10px;"></li>
+                    <li data-u-target="#carousel-9387" data-u-slide-to="1" class="u-grey-70 u-shape-circle"
+                        style="width: 10px; height: 10px;"></li>
+                </ol>
+                {% if other_pictures %}
+                    <div class="u-carousel-inner u-gallery-inner" role="listbox">
+                    {% for picture in other_pictures %}
+                        {% if forloop.counter == 1 %}
+                            <div class="u-active u-carousel-item u-gallery-item u-carousel-item-{{ forloop.counter }}">
+                        {% else %}
+                            <div class="u-carousel-item u-gallery-item u-carousel-item-{{ forloop.counter }}">
+                        {% endif %}
+                    <div class="u-back-slide ">
+                        <img class="u-back-image u-expanded u-image-contain"
+                             src="{% get_media_prefix %}{{ picture.picture }}">
+                    </div>
+                    <div class="u-over-slide u-over-slide-1">
+                        <h3 class="u-gallery-heading"></h3>
+                        <p class="u-gallery-text"></p>
+                    </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+                </div>
+                <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1"
+                   href="#carousel-9387" role="button" data-u-slide="prev">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+                    <span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+                </a>
+                <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2"
+                   href="#carousel-9387" role="button" data-u-slide="next">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+                    <span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+                </a>
+                </div>
+            </div>
+        {% endif %}
+</section>
+{% if video %}
+    <section class="u-align-center u-black u-clearfix u-section-3" id="sec-a022">
+        <div class="u-clearfix u-sheet u-valign-middle-xs u-sheet-1">
+            <video controls preload="auto" style="width: 100%">
+                <source src="{% get_media_prefix %}{{ video.video }}">
+            </video>
+        </div>
+    </section>
+{% endif %}
+
+{% if admin_info %}
+    <section class="u-clearfix u-grey-5 u-section-1" id="sec-e000"
+             style="background-color: #333333; color: white; text-align: center">
+        <div class="u-clearfix u-sheet u-block-982a-2" style="min-height: 145px;" data-block-type="Sheet">
+            <p class="u-text u-block-control u-block-982a-9" data-block="37"
+               style="width: 417px; margin: 20px auto 0px;"
+               data-block-type="Text">{{ admin_info.fio }}</p>
+            <p class="u-text u-block-control u-block-982a-9" data-block="37"
+               style="width: 417px; margin: 20px auto 0px;"
+               data-block-type="Text">{{ admin_info.mail }}</p>
+        </div>
+    </section>
+{% endif %}
+</body>
+</html>

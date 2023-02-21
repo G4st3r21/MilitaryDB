@@ -21,8 +21,11 @@ import MilitaryMuseum.views
 from MilitaryDB import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('find_form/', MilitaryMuseum.views.request_find_form, name="find"),
-    path('found_documents/', MilitaryMuseum.views.response_found_documents, name="found"),
-    path('document/<int:document_id>', MilitaryMuseum.views.response_document, name="doc")
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  path('admin/', admin.site.urls),
+                  path('', MilitaryMuseum.views.response_find_form),
+                  path('find_form/', MilitaryMuseum.views.response_find_form, name="find"),
+                  path('found_documents/', MilitaryMuseum.views.response_found_documents, name="found"),
+                  path('document/<int:document_id>', MilitaryMuseum.views.response_document, name="doc"),
+                  path('about/', MilitaryMuseum.views.response_about, name="about"),
+                  path('about_project/', MilitaryMuseum.views.response_about_project, name="about_project")
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

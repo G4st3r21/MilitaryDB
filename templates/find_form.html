@@ -1,0 +1,215 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Поиск записей</title>
+    <link rel="stylesheet" href="{% static 'css/find_form.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
+</head>
+{% if bg_image %}
+    <body class="u-body u-xl-mode" data-lang="ru"
+          style="
+                  background: rgba(225,225,225,0.35) url(
+                  {% get_media_prefix %}{{ bg_image }}) no-repeat;
+                  -moz-background-size: 100%; /* Firefox 3.6+ */
+                  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+                  -o-background-size: 100%; /* Opera 9.6+ */
+                  background-size: 100%; /* Современные браузеры */
+                  ">
+{% else %}
+    <body class="u-body u-xl-mode" data-lang="ru">
+{% endif %}
+<header class=" u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-clearfix u-header u-section-row-container"
+        id="sec-53f4" style="">
+    <div class="u-section-rows">
+        <div class="u-custom-color-1 u-section-row u-section-row-1">
+            <div class="u-clearfix u-sheet u-valign-top u-sheet-1">
+                <p class="u-align-center u-text u-text-1"> Московское высшее общевойсковое командное
+                    училище&nbsp;<br>Министерство обороны Российской Федерации
+                </p>
+                <img class="u-image u-image-contain u-image-default u-image-1"
+                     src="{% get_media_prefix %}{{ "images/default/Эмблема.png" }}" alt=""
+                     data-image-width="1181" data-image-height="1371">
+                <div class="u-gallery u-layout-grid u-lightbox u-no-transition u-show-text-none u-gallery-1">
+                    <div class="u-gallery-inner u-gallery-inner-1">
+                        <div class="u-effect-hover-zoom u-gallery-item u-shape-rectangle" data-image-width="1280"
+                             data-image-height="1280">
+                            <div class="u-back-slide">
+                                <img class="u-back-image u-expanded u-image-contain"
+                                     src="{% get_media_prefix %}{{ "images/default/жук.png" }}">
+                            </div>
+                            <div class="u-over-slide u-shading u-over-slide-1">
+                                <h3 class="u-gallery-heading"></h3>
+                                <p class="u-gallery-text"></p>
+                            </div>
+                        </div>
+                        <div class="u-effect-hover-zoom u-gallery-item u-shape-rectangle" data-image-width="1254"
+                             data-image-height="1280">
+                            <div class="u-back-slide">
+                                <img class="u-back-image u-expanded u-image-contain"
+                                     src="{% get_media_prefix %}{{ "images/default/лен.png" }}">
+                            </div>
+                            <div class="u-over-slide u-shading u-over-slide-2">
+                                <h3 class="u-gallery-heading"></h3>
+                                <p class="u-gallery-text"></p>
+                            </div>
+                        </div>
+                        <div class="u-effect-hover-zoom u-gallery-item u-shape-rectangle" data-image-width="1280"
+                             data-image-height="1280">
+                            <div class="u-back-slide">
+                                <img class="u-back-image u-expanded u-image-contain"
+                                     src="{% get_media_prefix %}{{ "images/default/ок.png" }}">
+                            </div>
+                            <div class="u-over-slide u-shading u-over-slide-3">
+                                <h3 class="u-gallery-heading"></h3>
+                                <p class="u-gallery-text"></p>
+                            </div>
+                        </div>
+                        <div class="u-effect-hover-zoom u-gallery-item u-shape-rectangle" data-image-width="1070"
+                             data-image-height="1280">
+                            <div class="u-back-slide">
+                                <img class="u-back-image u-expanded u-image-contain"
+                                     src="{% get_media_prefix %}{{ "images/default/кр.png" }}">
+                            </div>
+                            <div class="u-over-slide u-shading u-over-slide-4">
+                                <h3 class="u-gallery-heading"></h3>
+                                <p class="u-gallery-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="u-repeater u-block-control u-block-f578-32"
+             style="display: flex;background-color:#a8191f; min-height: 45.1094px; justify-content: space-evenly"
+             data-block="9"
+             data-block-type="List" data-block-selected="true">
+            <div class="u-align-center u-container-style u-list-item u-repeater-item u-block-control u-block-f578-33"
+                 style="" data-block="10" data-block-type="ListItem">
+                <div class="u-container-layout u-similar-container
+        u-valign-middle u-block-f578-34" style="padding-top: 0.2658px; padding-bottom: 0.2658px; padding-left: 10px;
+        padding-right: 10px" data-container-layout-dom="1"><a class="u-text u-text-default u-text-4"
+                                                              href="{% url 'about' %}">История МВОКУ</a></div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item u-block-control u-block-f578-36"
+                 style="" data-block="12" data-block-type="ListItem">
+                <div class="u-container-layout u-similar-container
+        u-valign-middle u-block-f578-37" style="padding-top: 0.2658px; padding-bottom: 0.2658px; padding-left: 10px;
+        padding-right: 10px" data-container-layout-dom="2"><a class="u-text u-text-default u-text-4"
+                                                              href="{% url 'find' %}">Поиск записей</a></div>
+            </div>
+
+            <div class="u-align-center u-container-style u-list-item u-repeater-item u-block-control u-block-f578-39"
+                 style="" data-block="38" data-block-type="ListItem">
+                <div class="u-container-layout u-similar-container
+        u-valign-middle u-block-f578-40" style="padding-top: 0.2658px; padding-bottom: 0.2658px; padding-left: 10px;
+        padding-right: 10px" data-container-layout-dom="5"><a class="u-text u-text-default u-text-4"
+                                                              href="{% url 'about_project' %}">О проекте</a></div>
+            </div>
+        </div>
+
+    </div>
+</header>
+<section class="u-align-center u-clearfix u-grey-5 u-section-1" id="sec-b028">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Поиск записей по базе данных</h1>
+        <div class="u-form u-form-1">
+            <form action="{% url 'found' %}"
+                  method="post"
+                  class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 10px">
+                {% csrf_token %}
+                <div class="u-form-group u-form-name u-form-partition-factor-3 u-label-top u-form-group-1">
+                    <label for="name-3b9a" class="u-label">Имя</label>
+                    <input type="text" id="name-3b9a" name="name"
+                           class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-1">
+                </div>
+                <div class="u-form-group u-form-partition-factor-3 u-label-top u-form-group-2">
+                    <label for="text-83e2" class="u-label">Фамилия</label>
+                    <input type="text" id="text-83e2" name="surname"
+                           class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-2">
+                </div>
+                <div class="u-form-group u-form-partition-factor-3 u-label-top u-form-group-3">
+                    <label for="text-35af" class="u-label">Отчество</label>
+                    s <input type="text" id="text-35af" name="patronymic"
+                             class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-3">
+                </div>
+                <div class="u-form-email u-form-group u-form-partition-factor-2 u-label-top">
+                    <label for="text-3b9a" class="u-label">Звание</label>
+                    <div class="u-form-select-wrapper">
+                        <select id="select-339c" name="rank"
+                                class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-9">
+                            {% for rank in ranks %}
+                                <option value="{{ rank }}">{{ rank }}</option>
+                            {% endfor %}
+                        </select>
+                        <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1"
+                             x="0px" y="0px" width="16px" height="16px"
+                             viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+                    </div>
+                </div>
+                <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-5">
+                    <label for="text-4a8b" class="u-label">Батальон</label>
+                    <input type="text" id="text-4a8b" name="battalion"
+                           class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-5">
+                </div>
+                <div class="u-form-date u-form-group u-form-partition-factor-2 u-label-top u-form-group-6">
+                    <label for="date-c9d7" class="u-label">Дата рождения</label>
+                    <input type="text" readonly="readonly" placeholder="ММ/ДД/ГГГГ" id="date-c9d7"
+                           name="date_of_birth"
+                           class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-6"
+                           required="" data-date-format="mm/dd/yyyy">
+                </div>
+                <div class="u-form-date u-form-group u-form-partition-factor-2 u-label-top u-form-group-7">
+                    <label for="date-1faf" class="u-label">Дата смерти</label>
+                    <input type="text" readonly="readonly" placeholder="ММ/ДД/ГГГГ" id="date-1faf"
+                           name="date_of_death"
+                           class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-7"
+                           required="" data-date-format="mm/dd/yyyy">
+                </div>
+                <div class="u-form-group u-form-number u-form-number-layout-number u-form-partition-factor-2 u-label-top u-form-group-8">
+                    <label for="number-68a9" class="u-label">Год выпуска</label>
+                    <div class="u-input-row" data-value="2022">
+                        <input value="" min="1900" max="2100" step="1" type="number" placeholder="" id="number-68a9"
+                               name="issue_year"
+                               class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-8">
+                    </div>
+                </div>
+                <div class="u-form-group u-form-partition-factor-2 u-form-select u-label-top u-form-group-9">
+                    <label for="select-339c" class="u-label">Место рождения</label>
+                    <div class="u-form-select-wrapper">
+                        <select id="select-339c" name="place_of_birth"
+                                class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-9">
+                            {% for place in places %}
+                                <option value="{{ place }}">{{ place }}</option>
+                            {% endfor %}
+                        </select>
+                        <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1"
+                             x="0px" y="0px" width="16px" height="16px"
+                             viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+                    </div>
+                </div>
+                <button type="submit" style="margin: 0 auto">Найти</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% if admin_info %}
+    <section class="u-clearfix u-grey-5 u-section-1" id="sec-e000"
+             style="background-color: #333333; color: white; text-align: center">
+        <div class="u-clearfix u-sheet u-block-982a-2" style="min-height: 145px;" data-block-type="Sheet">
+            <p class="u-text u-block-control u-block-982a-9" data-block="37"
+               style="width: 417px; margin: 20px auto 0px;"
+               data-block-type="Text">{{ admin_info.fio }}</p>
+            <p class="u-text u-block-control u-block-982a-9" data-block="37"
+               style="width: 417px; margin: 20px auto 0px;"
+               data-block-type="Text">{{ admin_info.mail }}</p>
+        </div>
+    </section>
+{% endif %}
+</body>
+</html>
