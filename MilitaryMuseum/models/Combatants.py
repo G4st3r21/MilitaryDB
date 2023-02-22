@@ -24,10 +24,6 @@ class Combatants(models.Model):
         verbose_name_plural = 'Документы'
         verbose_name = 'Документ'
 
-    @staticmethod
-    def get_all_ranks():
-        return set(combatant.rank for combatant in Combatants.objects.all())
-
     def get_fio(self):
         if self.patronymic:
             return f"{self.surname} {self.name} {self.patronymic}"

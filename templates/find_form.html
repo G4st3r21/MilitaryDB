@@ -134,14 +134,15 @@
                 </div>
                 <div class="u-form-group u-form-partition-factor-3 u-label-top u-form-group-3">
                     <label for="text-35af" class="u-label">Отчество</label>
-                    s <input type="text" id="text-35af" name="patronymic"
-                             class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-3">
+                    <input type="text" id="text-35af" name="patronymic"
+                           class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-3">
                 </div>
                 <div class="u-form-email u-form-group u-form-partition-factor-2 u-label-top">
                     <label for="text-3b9a" class="u-label">Звание</label>
                     <div class="u-form-select-wrapper">
                         <select id="select-339c" name="rank"
                                 class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-9">
+                            <option value="None">Не известно</option>
                             {% for rank in ranks %}
                                 <option value="{{ rank }}">{{ rank }}</option>
                             {% endfor %}
@@ -183,6 +184,7 @@
                     <div class="u-form-select-wrapper">
                         <select id="select-339c" name="place_of_birth"
                                 class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-9">
+                            <option value="None">Не известно</option>
                             {% for place in places %}
                                 <option value="{{ place }}">{{ place }}</option>
                             {% endfor %}

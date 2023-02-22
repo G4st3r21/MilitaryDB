@@ -22,7 +22,7 @@ from MilitaryDB import settings
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
-                  path('', MilitaryMuseum.views.response_find_form),
+                  path('', MilitaryMuseum.views.response_default_page, name="start"),
                   path('find_form/', MilitaryMuseum.views.response_find_form, name="find"),
                   path('found_documents/', MilitaryMuseum.views.response_found_documents, name="found"),
                   path('document/<int:document_id>', MilitaryMuseum.views.response_document, name="doc"),
