@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Найденные записи</title>
+    <title>ПРОЕКТ "КРЕМЛЁВСКАЯ ПАМЯТЬ"</title>
     <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
     <link rel="stylesheet" href="{% static 'css/found_documents.css' %}" media="screen">
     <script class="u-script" type="text/javascript" src="{% static 'js/jquery-1.9.1.min.js' %}" defer=""></script>
@@ -31,9 +31,10 @@
                 <p class="u-align-center u-text u-text-1"> Московское высшее общевойсковое командное
                     училище&nbsp;<br>Министерство обороны Российской Федерации
                 </p>
+                <a href="{% url 'start' %}">
                 <img class="u-image u-image-contain u-image-default u-image-1"
                      src="{% get_media_prefix %}{{ "images/default/Эмблема.png" }}" alt=""
-                     data-image-width="1181" data-image-height="1371">
+                     data-image-width="1181" data-image-height="1371"></a>
                 <div class="u-gallery u-layout-grid u-lightbox u-no-transition u-show-text-none u-gallery-1">
                     <div class="u-gallery-inner u-gallery-inner-1">
                         <div class="u-effect-hover-zoom u-gallery-item u-shape-rectangle" data-image-width="1280"
